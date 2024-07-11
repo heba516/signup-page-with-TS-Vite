@@ -1,0 +1,100 @@
+body {
+  background-color: black;
+  color: white;
+}
+.app {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.steps {
+  position: relative;
+}
+.steps::before, .steps::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 6px;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.steps::before {
+  width: 100%;
+  background-color: white;
+  z-index: -111;
+}
+.steps::after {
+  width: var(--after-width, 0%);
+  background-color: rgb(12, 148, 12);
+  z-index: -1;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.steps i {
+  padding: 15px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.btn {
+  background-color: rgb(28, 183, 28);
+  float: right;
+}
+.btn:hover {
+  background-color: rgb(12, 148, 12);
+}
+
+.prev_btn {
+  background-color: rgb(237, 234, 234);
+  float: left;
+}
+.prev_btn:hover {
+  background-color: rgb(237, 234, 234);
+}
+
+
+.content {
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  width: fit-content;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.slide {
+  width: 290px;
+  margin: 0 5px;
+}
+
+.err {
+  display: none;
+  font-size: 13px;
+  padding: 5px;
+  color: red;
+}

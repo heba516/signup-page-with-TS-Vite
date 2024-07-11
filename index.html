@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <link rel="stylesheet" href="src/all.min.css">
+  <link rel="stylesheet" href="src/bootstrap.min.css">
+  <link rel="stylesheet" href="src/bootstrap.min.css.map">
+  <script src="src/js/bootstrap.min.js"></script>
+  <script src="src/js/bootstrap.min.js.map"></script>
+</head>
+
+<body>
+  <div class="app mt-5">
+    <h1>sign up</h1>
+    <div class="steps container my-5">
+      <div class="row">
+        <div class="user_icon col"><i class="fa-solid fa-user"></i></div>
+        <div class="email_icon col"><i class="fa-solid fa-envelope"></i></div>
+        <div class="pass_icon col"><i class="fa-solid fa-key"></i></div>
+        <div class="compelete_icon col"><i class="fa-solid fa-trophy"></i></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="slider">
+        <div class="slide user_name">
+          <h3 class="my-4">User Name</h3>
+          <p>Your name should only contain char</p>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control user_input" placeholder="User name" aria-label="User name">
+              <p class="err"></p>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col">
+              <input type="text" class="form-control first_name" placeholder="First name" aria-label="First name">
+              <p class="err"></p>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control last_name" placeholder="Last name" aria-label="Last name">
+              <p class="err"></p>
+            </div>
+          </div>
+          <button type="button" class="btn mt-4">Submit</button>
+        </div>
+
+        <div class="slide email">
+          <h3 class="my-4">Email Address</h3>
+          <p>name@gmail.com</p>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email Address">
+            <p class="err"></p>
+          </div>
+          <button type="button" class="btn mt-4">Submit</button>
+        </div>
+
+        <div class="slide pass">
+          <h3 class="my-4">Password</h3>
+          <p>Must contain at least 8 char [Number, Upper/Lower case char]</p>
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password">
+            <p class="err"></p>
+          </div>
+          <button type="button" class="btn mt-4">Submit</button>
+        </div>
+
+        <div class="slide completed">
+          <h3>Congratulations!</h3>
+          <p><i>You have completed all the steps required for registration.</i></p>
+          <ul class="rules">
+            <li>Before submitting your information, please take a moment to ensure that all the details provided are
+              correct. </li>
+            <li> We take the privacy and security of our users very seriously, and it is important that all the
+              information
+              provided is accurate and up-to-date.</li>
+            <li>Once you have confirmed that everything is in order, simply click the 'Submit' button.</li>
+          </ul>
+
+          <button type="button" class="btn completed mt-4">Submit</button>
+        </div>
+
+        <div class="slide user">
+          <h3 class="my-4">Account</h3>
+          <p id="user"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
